@@ -133,7 +133,7 @@ function render(){
     for(const k of ['ATT','DRV','PLM','DEF','PHY','INT'])
       cats+=`<div class="cat" data-k="${k}" onclick="toggle(${i},'${k}')"><div class="lab ${c.stats[k].cls}">${k}</div><div class="num ${c.stats[k].cls}">${avg(c.stats[k].subs)}</div><div class="mag">🔍</div></div>`;
     return `<div class="card" data-card="${i}">
-      <div class="role">${c.role}<small>${c.name.toUpperCase()}</small></div>
+      <div class="role">${c.name.toUpperCase()}<small>${c.role}</small></div>
       <div class="hero">
         <div class="nba love" data-k="LOVE" onclick="toggle(${i},'LOVE')"><div class="nbadisc" style="background-image:url('${c.nbaLove.icon}');background-position:${c.nbaLove.pos}"></div>
           <div class="cap">${c.nbaLove.name}</div><div class="pw">${c.nbaLove.pwName}</div><div class="mag">🔍</div></div>
